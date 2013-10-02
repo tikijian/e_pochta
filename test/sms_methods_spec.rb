@@ -12,7 +12,7 @@ describe EPochtaSMS do
 			@good_params = {
 				'sender' => 'Dealer',
 				'text'	 => 'Hello Вова!',
-				'phone'	 => '79085085077',
+				'phone'	 => '71231231212',
 				'datetime' => '',
 				'sms_lifetime' => 0
 			}
@@ -35,13 +35,13 @@ describe EPochtaSMS do
 			@address_book_id = subject.create_address_book('name' => "campaign 2 test", 'description' => 'for campaign')
 			subject.add_phones({ 
 					'idAddressBook' => @address_book_id, 
-					'data' => [["79085085077", "Юрий Владимирович"], ['79518408051', 'Вова'] ].to_json 
+					'data' => [["71231232323", "asd asdf"], ['71231232323', 'Вова'] ].to_json 
 				})
 
 			@good_params = {
 				'sender' => '12345',
 				'list_id' => @address_book_id,
-				'text'	=> '%1%, представляем Вам CRM Dealerpoint!',
+				'text'	=> '%1%, представляем Вам 123123!',
 				'datetime' => '',
 				'batch' => 0,
 				'batchinterval' => 0,

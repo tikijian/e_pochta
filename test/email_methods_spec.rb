@@ -51,7 +51,7 @@ describe EPochtaEmail do
 	describe 'Campaign method' do
 		before(:all) do
 			@addr_book_id = subject.addAddressbook({'name' => "My adress book #{Random.rand 1000}"})['addressbook_id']			
-			subject.addAddresses('id_list' => @addr_book_id, 'email[]' => ['timurt1988@gmail.com', 'noodledoomer@rambler.ru'])
+			subject.addAddresses('id_list' => @addr_book_id, 'email[]' => ['yourmail@gmail.com', 'yourmail2@gmail.com'])
 			sleep(6)
 			subject.activateEmails('id' => @addr_book_id, 'description' => 'Моя почта для теста')			
 			sleep(6)
@@ -63,7 +63,7 @@ describe EPochtaEmail do
 				campaign = subject.createCampaign({
 					'name' => 'test campaign',
 					'sender_name' => 'Тимур',
-					'sender_email' => 'rouge1988@yandex.ru',
+					'sender_email' => 'yourmail@gmail.com',
 					'subject' => 'test email',
 					'body' => Base64.encode64("<h2>test</h2> <p>my mail</p>"),
 					'list_id' => @addr_book_id			

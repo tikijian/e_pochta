@@ -117,10 +117,10 @@ describe EPochtaSMS do
 			before do			
 				@good_params = { 
 					'idAddressBook' => @address_book_id, 
-					'data' => [["89085085077", "Тимур Русланович"], ['89518408051', 'Кристина'] ].to_json }
+					'data' => [["89081231223", "Тимур Русланович"], ['89081231223', 'Кристина'] ].to_json }
 				@bad_params  = {
 					'idAddressBook' => 1251255, 
-					'data' => [["89085085077", "Тимур Русланович"], ['89518408051', 'Кристина'] ].to_json }	
+					'data' => [["89081231223", "Тимур Русланович"], ['81231231212', 'Кристина'] ].to_json }	
 			end
 
 			it 'should be true' do
